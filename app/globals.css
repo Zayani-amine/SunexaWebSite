@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* ============================================
+   SUNEXA — Design System (Tailwind v4 Theme)
+   ============================================ */
+
+@theme {
+  /* Colors */
+  --color-navy: #0A0F1E;
+  --color-navy2: #0F1729;
+  --color-navy3: #162040;
+  --color-gold: #F59E0B;
+  --color-gold2: #FBBF24;
+  --color-gold-dim: rgba(245, 158, 11, 0.15);
+  --color-success: #10B981;
+  --color-gray: #94A3B8;
+  --color-gray2: #CBD5E1;
+
+  /* Fonts — using the same CSS variable names set in layout.tsx */
+  --font-playfair: var(--font-playfair), serif;
+  --font-dmsans: var(--font-dmsans), sans-serif;
+  --font-noto: var(--font-noto-arabic), sans-serif;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-navy);
+  color: #FFFFFF;
+  font-family: var(--font-dmsans);
+  /* Subtle noise texture overlay */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   Custom Utility Classes  
+   ============================================ */
+
+@utility text-balance {
+  text-wrap: balance;
+}

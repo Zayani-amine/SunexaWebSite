@@ -1,0 +1,194 @@
+
+> sunexa@0.1.0 build
+> next build
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\Zayani\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\Zayani\Desktop\SunexaMarketingCampin\sunexa\package-lock.json
+
+▲ Next.js 16.2.1 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 10 errors:
+./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:6:1
+Module not found: Can't resolve '@/components/Calculator'
+  [90m4 |[0m [36mimport[0m [33mProof[0m [36mfrom[0m [32m'@/components/Proof'[0m;
+  [90m5 |[0m [36mimport[0m [33mHowItWorks[0m [36mfrom[0m [32m'@/components/HowItWorks'[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m [33mCalculator[0m [36mfrom[0m [32m'@/components/Calculator'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m [33mTestimonials[0m [36mfrom[0m [32m'@/components/Testimonials'[0m;
+  [90m8 |[0m [36mimport[0m [33mReferral[0m [36mfrom[0m [32m'@/components/Referral'[0m;
+  [90m9 |[0m [36mimport[0m [33mLeadForm[0m [36mfrom[0m [32m'@/components/LeadForm'[0m;
+
+Import map: aliased to relative './src/components/Calculator' inside of [project]/Desktop/SunexaMarketingCampin/sunexa
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:10:1
+Module not found: Can't resolve '@/components/Footer'
+  [90m 8 |[0m [36mimport[0m [33mReferral[0m [36mfrom[0m [32m'@/components/Referral'[0m;
+  [90m 9 |[0m [36mimport[0m [33mLeadForm[0m [36mfrom[0m [32m'@/components/LeadForm'[0m;
+[31m[1m>[0m [90m10 |[0m [36mimport[0m { [33mFooter[0m, [33mFloatingWhatsApp[0m } [36mfrom[0m [32m'@/components/Footer'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m11 |[0m
+  [90m12 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m13 |[0m   [36mreturn[0m (
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/Desktop/SunexaMarketingCampin/sunexa
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:2:1
+Module not found: Can't resolve '@/components/Hero'
+  [90m1 |[0m [36mimport[0m [33mNav[0m [36mfrom[0m [32m'@/components/Nav'[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m'@/components/Hero'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m [36mimport[0m [33mPain[0m [36mfrom[0m [32m'@/components/Pain'[0m;
+  [90m4 |[0m [36mimport[0m [33mProof[0m [36mfrom[0m [32m'@/components/Proof'[0m;
+  [90m5 |[0m [36mimport[0m [33mHowItWorks[0m [36mfrom[0m [32m'@/components/HowItWorks'[0m;
+
+Import map: aliased to relative './src/components/Hero' inside of [project]/Desktop/SunexaMarketingCampin/sunexa
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:5:1
+Module not found: Can't resolve '@/components/HowItWorks'
+  [90m3 |[0m [36mimport[0m [33mPain[0m [36mfrom[0m [32m'@/components/Pain'[0m;
+  [90m4 |[0m [36mimport[0m [33mProof[0m [36mfrom[0m [32m'@/components/Proof'[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m [33mHowItWorks[0m [36mfrom[0m [32m'@/components/HowItWorks'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m [33mCalculator[0m [36mfrom[0m [32m'@/components/Calculator'[0m;
+  [90m7 |[0m [36mimport[0m [33mTestimonials[0m [36mfrom[0m [32m'@/components/Testimonials'[0m;
+  [90m8 |[0m [36mimport[0m [33mReferral[0m [36mfrom[0m [32m'@/components/Referral'[0m;
+
+Import map: aliased to relative './src/components/HowItWorks' inside of [project]/Desktop/SunexaMarketingCampin/sunexa
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:9:1
+Module not found: Can't resolve '@/components/LeadForm'
+  [90m 7 |[0m [36mimport[0m [33mTestimonials[0m [36mfrom[0m [32m'@/components/Testimonials'[0m;
+  [90m 8 |[0m [36mimport[0m [33mReferral[0m [36mfrom[0m [32m'@/components/Referral'[0m;
+[31m[1m>[0m [90m 9 |[0m [36mimport[0m [33mLeadForm[0m [36mfrom[0m [32m'@/components/LeadForm'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m10 |[0m [36mimport[0m { [33mFooter[0m, [33mFloatingWhatsApp[0m } [36mfrom[0m [32m'@/components/Footer'[0m;
+  [90m11 |[0m
+  [90m12 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+
+Import map: aliased to relative './src/components/LeadForm' inside of [project]/Desktop/SunexaMarketingCampin/sunexa
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:1:1
+Module not found: Can't resolve '@/components/Nav'
+[31m[1m>[0m [90m1 |[0m [36mimport[0m [33mNav[0m [36mfrom[0m [32m'@/components/Nav'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m'@/components/Hero'[0m;
+  [90m3 |[0m [36mimport[0m [33mPain[0m [36mfrom[0m [32m'@/components/Pain'[0m;
+  [90m4 |[0m [36mimport[0m [33mProof[0m [36mfrom[0m [32m'@/components/Proof'[0m;
+
+Import map: aliased to relative './src/components/Nav' inside of [project]/Desktop/SunexaMarketingCampin/sunexa
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/Pain'
+  [90m1 |[0m [36mimport[0m [33mNav[0m [36mfrom[0m [32m'@/components/Nav'[0m;
+  [90m2 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m'@/components/Hero'[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mPain[0m [36mfrom[0m [32m'@/components/Pain'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m [33mProof[0m [36mfrom[0m [32m'@/components/Proof'[0m;
+  [90m5 |[0m [36mimport[0m [33mHowItWorks[0m [36mfrom[0m [32m'@/components/HowItWorks'[0m;
+  [90m6 |[0m [36mimport[0m [33mCalculator[0m [36mfrom[0m [32m'@/components/Calculator'[0m;
+
+Import map: aliased to relative './src/components/Pain' inside of [project]/Desktop/SunexaMarketingCampin/sunexa
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:4:1
+Module not found: Can't resolve '@/components/Proof'
+  [90m2 |[0m [36mimport[0m [33mHero[0m [36mfrom[0m [32m'@/components/Hero'[0m;
+  [90m3 |[0m [36mimport[0m [33mPain[0m [36mfrom[0m [32m'@/components/Pain'[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [33mProof[0m [36mfrom[0m [32m'@/components/Proof'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m [33mHowItWorks[0m [36mfrom[0m [32m'@/components/HowItWorks'[0m;
+  [90m6 |[0m [36mimport[0m [33mCalculator[0m [36mfrom[0m [32m'@/components/Calculator'[0m;
+  [90m7 |[0m [36mimport[0m [33mTestimonials[0m [36mfrom[0m [32m'@/components/Testimonials'[0m;
+
+Import map: aliased to relative './src/components/Proof' inside of [project]/Desktop/SunexaMarketingCampin/sunexa
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:8:1
+Module not found: Can't resolve '@/components/Referral'
+  [90m 6 |[0m [36mimport[0m [33mCalculator[0m [36mfrom[0m [32m'@/components/Calculator'[0m;
+  [90m 7 |[0m [36mimport[0m [33mTestimonials[0m [36mfrom[0m [32m'@/components/Testimonials'[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m [33mReferral[0m [36mfrom[0m [32m'@/components/Referral'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m [33mLeadForm[0m [36mfrom[0m [32m'@/components/LeadForm'[0m;
+  [90m10 |[0m [36mimport[0m { [33mFooter[0m, [33mFloatingWhatsApp[0m } [36mfrom[0m [32m'@/components/Footer'[0m;
+  [90m11 |[0m
+
+Import map: aliased to relative './src/components/Referral' inside of [project]/Desktop/SunexaMarketingCampin/sunexa
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:7:1
+Module not found: Can't resolve '@/components/Testimonials'
+  [90m 5 |[0m [36mimport[0m [33mHowItWorks[0m [36mfrom[0m [32m'@/components/HowItWorks'[0m;
+  [90m 6 |[0m [36mimport[0m [33mCalculator[0m [36mfrom[0m [32m'@/components/Calculator'[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m [33mTestimonials[0m [36mfrom[0m [32m'@/components/Testimonials'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m [33mReferral[0m [36mfrom[0m [32m'@/components/Referral'[0m;
+  [90m 9 |[0m [36mimport[0m [33mLeadForm[0m [36mfrom[0m [32m'@/components/LeadForm'[0m;
+  [90m10 |[0m [36mimport[0m { [33mFooter[0m, [33mFloatingWhatsApp[0m } [36mfrom[0m [32m'@/components/Footer'[0m;
+
+Import map: aliased to relative './src/components/Testimonials' inside of [project]/Desktop/SunexaMarketingCampin/sunexa
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:6:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:10:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:9:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:8:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/SunexaMarketingCampin/sunexa/app/page.tsx:7:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
