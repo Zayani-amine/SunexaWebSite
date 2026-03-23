@@ -21,23 +21,35 @@ export async function POST(req: Request) {
       .select('id')
       .single();
 
-    if (leadError) throw leadError;
+    if (leadError) {
+      console.error('Lead insertion error:', leadError);
+      return NextResponse.json({ 
+        error: 'Erreur Supabase', 
+        details: leadError.message,
+        code: leadError.code 
+      }, { status: 500 });
+    }
 
     // Handle Referral logic
     if (referrer_code && leadData) {
-      await supabase
+      const { error: refError } = await supabase
         .from('referrals')
         .insert([{
           referrer_telephone: referrer_code,
-          referrer_nom: 'Utilisateur inconnu', // We'd ideally look this up
+          referrer_nom: 'Utilisateur inconnu',
           referred_lead_id: leadData.id,
           reward_status: 'en_attente'
         }]);
+      if (refError) console.error('Referral insertion error:', refError);
     }
 
     return NextResponse.json({ id: leadData.id });
   } catch (error: any) {
-    console.error('Lead submission error:', error);
-    return NextResponse.json({ error: error.message || 'Internal Server Error' }, { status: 500 });
+    console.error('Lead submission crash:', error);
+    return NextResponse.json({ 
+      error: 'Erreur Serveur', 
+      details: error.message || 'Unknown error'
+    }, { status: 500 });
   }
 }
+

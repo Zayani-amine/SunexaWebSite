@@ -68,11 +68,14 @@ export default function LeadForm() {
         })
       });
 
-      if (!res.ok) throw new Error('Erreur lors de la soumission');
-
       const data = await res.json();
+      
+      if (!res.ok) {
+        throw new Error(data.details || data.error || 'Erreur lors de la soumission');
+      }
 
       // Generate partial lead id for referral sharing
+
       const leadIdLast6 = data.id ? data.id.slice(-6) : telephone.slice(-6);
 
       // Redirect
