@@ -7,10 +7,12 @@ export async function POST(req: Request) {
     const { nom, telephone, gouvernorat, conso_kwh_mois, type_projet, source_campaign, referrer_code, comment_connu } = body;
 
     const supabase = supabaseAdmin;
+    if (!supabase) {
+      console.warn('Supabase not configured, mocking lead creation.');
+      return NextResponse.json({ id: 'mock-' + Date.now() });
+    }
     console.log('Attempting to insert lead:', { nom, telephone, source_campaign });
 
-
-    // Insert lead
     const { data: leadData, error: leadError } = await supabase
       .from('leads')
       .insert([{

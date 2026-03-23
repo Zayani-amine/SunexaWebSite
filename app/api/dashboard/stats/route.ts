@@ -9,6 +9,7 @@ export async function GET() {
 
   try {
     const supabase = supabaseAdmin;
+    if (!supabase) return NextResponse.json({ error: 'DB not configured' }, { status: 500 });
 
     // Get total leads
     const { count: totalLeads } = await supabase.from('leads').select('*', { count: 'exact', head: true });

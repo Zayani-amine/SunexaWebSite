@@ -15,6 +15,7 @@ export async function GET(req: Request) {
 
   try {
     const supabase = supabaseAdmin;
+    if (!supabase) return NextResponse.json({ leads: [] });
 
     let query = supabase.from('leads').select('*').order('created_at', { ascending: false });
 
