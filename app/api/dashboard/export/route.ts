@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
-import { createClient } from '@supabase/supabase-js';
+import { supabaseAdmin } from '@/lib/supabase';
 
 export async function GET(req: Request) {
   const cookieStore = await cookies();
@@ -14,12 +14,8 @@ export async function GET(req: Request) {
   const search = searchParams.get('search');
 
   try {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-    if (!supabaseUrl || !supabaseKey) { return new NextResponse('Missing DB Config', { status: 500 }) }
-
-    const supabase = createClient(supabaseUrl, supabaseKey);
+    const supabase = supabaseAdmin;
+    if (!supabase) { return new NextResponse('Missing DB Config', { status: 500 }) }
 
     let query = supabase.from('leads').select('*').order('created_at', { ascending: false });
 

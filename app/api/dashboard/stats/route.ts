@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
-import { createClient } from '@supabase/supabase-js';
+import { supabaseAdmin } from '@/lib/supabase';
 
 export async function GET() {
   const cookieStore = await cookies();
@@ -8,10 +8,7 @@ export async function GET() {
   if (!isAuth) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
   try {
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!
-    );
+    const supabase = supabaseAdmin;
 
     // Get total leads
     const { count: totalLeads } = await supabase.from('leads').select('*', { count: 'exact', head: true });

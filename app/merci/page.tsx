@@ -29,7 +29,7 @@ function MerciContent() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[80vh] px-6 text-center max-w-3xl mx-auto gap-8">
-      
+
       {/* Success Anim */}
       <div className="relative">
         <div className="absolute inset-0 bg-gold blur-3xl opacity-20 rounded-full" />
@@ -54,16 +54,16 @@ function MerciContent() {
         <p className="text-gray text-sm mb-6">
           Pour chaque ami qui installe avec Sunexa grâce à votre lien, vous recevez 200 TND cash.
         </p>
-        
+
         <div className="flex flex-col gap-2 mb-6 text-left">
           <label className="text-sm font-medium text-gray">Votre lien personnel de parrainage:</label>
           <div className="flex bg-navy border border-white/20 rounded-xl overflow-hidden">
-            <input 
-              readOnly 
-              value={referralLink} 
-              className="flex-grow bg-transparent px-4 py-3 text-white outline-none font-mono text-sm" 
+            <input
+              readOnly
+              value={referralLink}
+              className="flex-grow bg-transparent px-4 py-3 text-white outline-none font-mono text-sm"
             />
-            <button 
+            <button
               onClick={handleCopy}
               className="bg-white/10 hover:bg-white/20 px-4 flex items-center gap-2 text-white font-medium transition-colors border-l border-white/20"
             >
@@ -73,9 +73,9 @@ function MerciContent() {
           </div>
         </div>
 
-        <a 
-          href={whatsappUrl} 
-          target="_blank" 
+        <a
+          href={whatsappUrl}
+          target="_blank"
           rel="noreferrer"
           className="w-full bg-[#25D366] hover:bg-[#20BE5C] text-navy font-bold py-3 rounded-xl transition-all flex justify-center items-center gap-2 mb-2"
         >

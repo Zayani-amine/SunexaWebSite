@@ -36,7 +36,7 @@ export default function Hero() {
 
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-navy">
-      
+
       {/* Image Slider Background */}
       <div className="absolute inset-0 z-0">
         {heroImages.map((img, idx) => (
@@ -68,7 +68,7 @@ export default function Hero() {
 
       {/* Content Layer */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 text-center flex flex-col items-center gap-8">
-        
+
         <div className="flex flex-col gap-4 max-w-4xl">
           <h1 className="font-playfair text-5xl md:text-7xl font-black text-white leading-[1.1] tracking-tight text-balance">
             Arrêtez de payer <span className="text-gold">STEG</span>,<br />
@@ -83,7 +83,7 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
-          <button 
+          <button
             onClick={handleScrollToForm}
             className="group bg-gold hover:bg-gold2 transition-all text-navy font-bold px-10 py-5 rounded-full text-lg shadow-[0_0_30px_rgba(245,158,11,0.4)] hover:scale-105 active:scale-95"
           >
