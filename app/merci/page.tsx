@@ -17,7 +17,7 @@ function MerciContent() {
     setSiteUrl(window.location.origin);
   }, []);
 
-  const referralLink = `${siteUrl}/c/ref/${refCode}`;
+  const referralLink = `${siteUrl}`;
   const shareText = `Salam! J'ai trouvé Sunexa pour le solaire — agréé depuis 2012, devis gratuit en 2 min 👉 ${referralLink} 🌞`;
   const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
 
