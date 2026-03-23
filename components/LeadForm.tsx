@@ -26,8 +26,8 @@ export default function LeadForm() {
     const handlePrefill = () => {
       const storedGov = localStorage.getItem('sunexa_prefill_gov');
       const storedConso = localStorage.getItem('sunexa_prefill_conso');
-      if(storedGov) setGov(storedGov);
-      if(storedConso) setConso(storedConso);
+      if (storedGov) setGov(storedGov);
+      if (storedConso) setConso(storedConso);
     };
 
     window.addEventListener('sunexa_prefill_ready', handlePrefill);
@@ -63,7 +63,7 @@ export default function LeadForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           nom, telephone, gouvernorat: gov, conso_kwh_mois: conso,
-          type_projet: projet, source_campaign: source, 
+          type_projet: projet, source_campaign: source,
           referrer_code: referrer, comment_connu: connu
         })
       });
@@ -71,7 +71,7 @@ export default function LeadForm() {
       if (!res.ok) throw new Error('Erreur lors de la soumission');
 
       const data = await res.json();
-      
+
       // Generate partial lead id for referral sharing
       const leadIdLast6 = data.id ? data.id.slice(-6) : telephone.slice(-6);
 
@@ -86,7 +86,7 @@ export default function LeadForm() {
 
   return (
     <section id="form-section" className="py-24 bg-navy2 relative z-10 w-full flex flex-col items-center">
-      
+
       {/* Urgency Banner */}
       <div className="bg-gold/10 border border-gold/30 rounded-xl px-6 py-4 mb-12 max-w-3xl text-center shadow-[0_0_20px_rgba(245,158,11,0.15)] mx-6">
         <p className="text-gold font-bold">
@@ -99,7 +99,7 @@ export default function LeadForm() {
           <h2 className="font-playfair text-3xl font-bold text-white mb-2">
             Obtenez votre devis gratuit maintenant
           </h2>
-          <p className="font-noto text-sm text-gold-dim" dir="rtl">دقيقتان. مجاناً. بدون التزام. فريقنا سيتصل بك خلال 30 دقيقة</p>
+          <p className="font-noto text-sm text-white" dir="rtl">دقيقتان. مجاناً. بدون التزام. فريقنا سيتصل بك خلال 30 دقيقة</p>
           <p className="text-gray text-sm mt-2">2 minutes. Gratuit. Sans engagement. Notre équipe vous rappelle sous 30 minutes.</p>
         </div>
 
@@ -109,7 +109,7 @@ export default function LeadForm() {
               <label className="text-sm text-gray font-medium">Prénom et Nom *</label>
               <input required type="text" value={nom} onChange={e => setNom(e.target.value)} className="w-full bg-navy border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold transition-colors" />
             </div>
-            
+
             <div className="flex flex-col gap-2">
               <label className="text-sm text-gray font-medium">Téléphone *</label>
               <input required type="tel" placeholder="2X XXX XXX" value={telephone} onChange={e => setTelephone(e.target.value)} className="w-full bg-navy border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold transition-colors" />
@@ -124,15 +124,15 @@ export default function LeadForm() {
                 {gouvernorats.map(g => <option key={g} value={g}>{g}</option>)}
               </select>
             </div>
-            
+
             <div className="flex flex-col gap-2">
-              <label className="text-sm text-gray font-medium">Consommation estimée</label>
+              <label className="text-sm text-gray font-medium">Consommation & Facture STEG</label>
               <select required value={conso} onChange={e => setConso(e.target.value)} className="w-full bg-navy border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold transition-colors appearance-none">
-                <option value="" disabled>Sélectionner...</option>
-                <option value="Moins de 100 kWh">Moins de 100 kWh</option>
-                <option value="100–200 kWh">100–200 kWh</option>
-                <option value="200–500 kWh">200–500 kWh</option>
-                <option value="Plus de 500 kWh">Plus de 500 kWh</option>
+                <option value="" disabled>{"Sélectionner votre profil..."}</option>
+                <option value="Faible (< 200 kWh / < 50 TND)">{"Faible (< 200 kWh / < 50 TND)"}</option>
+                <option value="Moyenne (200–500 kWh / 50–150 TND)">{"Moyenne (200–500 kWh / 50–150 TND)"}</option>
+                <option value="Élevée (500–800 kWh / 150–300 TND)">{"Élevée (500–800 kWh / 150–300 TND)"}</option>
+                <option value="Trés Élevée (> 800 kWh / +300 TND)">{"Trés Élevée (> 800 kWh / +300 TND)"}</option>
               </select>
             </div>
           </div>
@@ -147,7 +147,7 @@ export default function LeadForm() {
                 <option value="Autre">Autre</option>
               </select>
             </div>
-            
+
             <div className="flex flex-col gap-2">
               <label className="text-sm text-gray font-medium">Comment nous avez-vous connu?</label>
               <select value={connu} onChange={e => setConnu(e.target.value)} className="w-full bg-navy border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold transition-colors appearance-none">
@@ -163,8 +163,8 @@ export default function LeadForm() {
 
           {error && <p className="text-red-400 text-sm mt-2">{error}</p>}
 
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             disabled={loading}
             className="w-full bg-gold hover:bg-gold2 text-navy font-bold py-4 rounded-xl mt-4 transition-all hover:scale-[1.02] shadow-lg flex justify-center items-center gap-2 disabled:opacity-70 disabled:hover:scale-100"
           >
