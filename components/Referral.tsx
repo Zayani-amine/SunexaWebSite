@@ -10,7 +10,7 @@ export default function Referral() {
     setSiteUrl(window.location.origin);
   }, []);
 
-  const shareText = `Salam! J'ai trouvé une super offre solaire avec Sunexa — agrée depuis 2012, devis gratuit en 2 min. Regarde ici: ${siteUrl}/c/ref/SHARE 🌞`;
+  const shareText = `Salam! J'ai trouvé une super offre solaire avec Sunexa — agrée depuis 2012, devis gratuit en 2 min. Regarde ici: ${siteUrl} 🌞`;
   const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
 
   return (
