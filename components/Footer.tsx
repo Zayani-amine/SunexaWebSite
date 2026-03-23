@@ -1,6 +1,6 @@
 'use client';
 
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook } from 'lucide-react';
 import Link from 'next/link';
 
 export function Footer() {
@@ -10,8 +10,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           
           <div className="flex flex-col gap-4">
-            <span className="font-playfair text-3xl font-bold text-white tracking-widest">SUNEXA</span>
-            <span className="text-gold text-sm tracking-widest uppercase">Agréé depuis 2012</span>
+            <Link href="/" className="block">
+              <img src="/logo.png" alt="SUNEXA Logo" className="h-16 md:h-20 w-auto object-contain brightness-110" />
+            </Link>
+            <span className="text-gold text-xs tracking-widest uppercase">Agréé depuis 2012</span>
             <p className="font-dmsans text-gray text-sm max-w-xs mt-2 leading-relaxed">
               Parmi les premiers installateurs photovoltaïques certifiés en Tunisie. Installation résidentielle, commerciale et pompage solaire.
             </p>
@@ -39,11 +41,22 @@ export function Footer() {
                 <Mail className="w-4 h-4 text-gold" />
                 <span>contact@ge-energie.com</span>
               </li>
-              <li className="flex flex-col gap-1">
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-gold" />
-                  <span>Couverture nationale (24 Gouvernorats)</span>
-                </div>
+              <li className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-gold" />
+                <span>Couverture nationale (24 Gouvernorats)</span>
+              </li>
+              <li className="mt-4">
+                <a 
+                  href="https://www.facebook.com/share/1HwpRx6hwD/?mibextid=wwXIfr" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-white hover:text-gold transition-colors font-medium"
+                >
+                  <div className="w-10 h-10 bg-[#1877F2] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                    <Facebook className="w-6 h-6 text-white" />
+                  </div>
+                  <span>Suivez-nous sur Facebook</span>
+                </a>
               </li>
             </ul>
           </div>
